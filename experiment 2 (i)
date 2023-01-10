@@ -1,0 +1,64 @@
+Startup execution:
+  loading initial environment
+
+--> clc;
+
+--> clear;
+
+--> Z=[2;1];P=[0;-3-%i;-3+%i];K=2.5;
+
+--> disp(Z,'enter the zeros Z=')
+
+ enter the zeros Z=
+
+
+   2.
+   1.
+
+
+--> disp(P,'enter the poles P =')
+
+ enter the poles P =
+
+
+   0.  
+  -3. - i
+  -3. + i  
+
+
+--> disp(K,'enter the sytem gain K=')
+
+ enter the sytem gain K=
+
+
+   2.5
+
+
+--> S=zp2tf(Z,P,K,"c")
+ S  = 
+
+                  2  
+   5 - 7.5s + 2.5s   
+   ----------------  
+            2   3    
+    10s + 6s + s     
+
+
+--> roots(S.num)
+ ans  =
+
+   2.  
+   1.  
+
+
+--> disp(S,'the obtained transfer function S=')
+
+ the obtained transfer function S=
+
+
+                  2  
+   5 - 7.5s + 2.5s   
+   ----------------  
+            2   3    
+    10s + 6s + s     
+
